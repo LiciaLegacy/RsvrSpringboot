@@ -46,7 +46,7 @@ public class UserController {
 	}
 	
 	//Update user
-	@PutMapping("/{id}") //put for updates
+	@PutMapping("/{id}") //put for updates to user
 	public User updateUser(@PathVariable Long id, User user) {
 		return userServiceImpl.updateUserById(id, user);		
 	}
