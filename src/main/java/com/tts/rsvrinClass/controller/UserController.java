@@ -40,14 +40,14 @@ public class UserController {
 	
 	//Create a user
 	@PostMapping()	//this will post to our root users, so we don't need to specify a path here
-	public User saveUser(User user) {
+	public User saveUser(@RequestBody User user) {
 		return userServiceImpl.saveUser(user);
 
 	}
 	
 	//Update user
 	@PutMapping("/{id}") //put for updates to user
-	public User updateUser(@PathVariable Long id, User user) {
+	public User updateUser(@PathVariable Long id, @RequestBody User user) {
 		return userServiceImpl.updateUserById(id, user);		
 	}
 
